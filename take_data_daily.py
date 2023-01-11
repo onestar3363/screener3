@@ -393,7 +393,7 @@ for name, frame, framew in zip(names,framelist, framelistw):
                             sira +=1
                             expander('pullback')
                 if option2 == 'week':
-                   if (framew['Decision Super2'].iloc[-2]=='Sell' or framew['Decision Super3'].iloc[-2]=='Sell')\
+                   if (framew['Decision Super2'].iloc[-2]=='Sell' or framew['EMA50_cross'].iloc[-h1]=='Sell')\
                    and (framew['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] or framew['Close'].iloc[-h1]<framew['sup6'].iloc[-h1]):
                             sira +=1
                             expander('week breakout')
