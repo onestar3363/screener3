@@ -350,7 +350,7 @@ for name, frame, framew in zip(names,framelist, framelistw):
                 if option2 == 'consolidating':             
                    if (frame['Consolidating'].iloc[-h1]=='Yes' and frame['Consolidating2'].iloc[-h1]=='Yes' and frame['Consolidating3'].iloc[-h1]=='Yes')\
                    and (frame['Dec_EMA50'].iloc[-h1]=='Buy'and frame['Dec_EMA20'].iloc[-h1]=='Buy')\
-                   and frame['EMA20_cross'].iloc[-h1-1]=='Buy2'\
+                   and frame['Decision Super'].iloc[-h1-1]=='Buy2'\
                    and (frame['Close'].iloc[-h1]>frame['sup2'].iloc[-h1]>frame['sup4'].iloc[-h1]>frame['sup6'].iloc[-h1])\
                    and frame['Dec_EMA200'].iloc[-h1]=='Buy'\
                    and frame['Dec_MACD'].iloc[-h1]=='Buy':
