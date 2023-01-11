@@ -371,7 +371,7 @@ for name, frame, framew in zip(names,framelist, framelistw):
                    and (frame['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] or frame['Close'].iloc[-h1]<frame['sup6'].iloc[-h1]):
                              sira +=1
                              expander('breakout')
-                   elif (framew['Decision Super2'].iloc[-1]=='Sell' or framew['Decision Super3'].iloc[-1]=='Sell')\
+                   elif (framew['Decision Super'].iloc[-1]=='Sell' or framew['Decision Super2'].iloc[-1]=='Sell' or framew['Decision Super3'].iloc[-1]=='Sell')\
                    and (framew['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] or framew['Close'].iloc[-h1]<framew['sup6'].iloc[-h1]):
                             sira +=1
                             expander('week breakout')
