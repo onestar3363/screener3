@@ -371,20 +371,14 @@ for name, frame, framew in zip(names,framelist, framelistw):
                    and (frame['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] or frame['Close'].iloc[-h1]<frame['sup6'].iloc[-h1]):
                              sira +=1
                              expander('breakout')
-                   elif (framew['Decision Super2'].iloc[-1]=='Sell' or framew['Decision Super3'].iloc[-1]=='Sell')\
-                   and (framew['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] or framew['Close'].iloc[-h1]<framew['sup6'].iloc[-h1]):
-                            sira +=1
-                            expander('week breakout')
+                            
                 if option2=='pullback':
                    if (frame['Decision Super2'].iloc[-h1]=='Sell2' or frame['Decision Super2'].iloc[-h1]=='Sell2' or frame['Decision Super3'].iloc[-h1]=='Sell2'\
                    or frame['EMA50_cross'].iloc[-h1]=='Sell2' or frame['EMA50_cross'].iloc[-h1]=='Sell2' or frame['EMA200_cross'].iloc[-h1]=='Sell2')\
                    and (frame['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] and frame['Close'].iloc[-h1]<frame['sup6'].iloc[-h1] and frame['Dec_EMA50'].iloc[-1]=='Sell'):
                             sira +=1
                             expander('pullback')
-                   elif (framew['Decision Super2'].iloc[-1]=='Sell2' or framew['Decision Super3'].iloc[-1]=='Sell2')\
-                   and (framew['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] or framew['Close'].iloc[-h1]<framew['sup6'].iloc[-h1]):
-                            sira +=1
-                            expander('week pullback')
+                            
                 if option2=='consolidating':
                    if (frame['Consolidating2'].iloc[-h1]=='Yes' or frame['Consolidating3'].iloc[-h1]=='Yes')\
                    and frame['Dec_MACD'].iloc[-h1]=='Sell'\
@@ -393,7 +387,17 @@ for name, frame, framew in zip(names,framelist, framelistw):
                    #and frame['Decision ADX'].iloc[-h]=='Buy':
                    #and frame['Dec_EMA50'].iloc[-1]=='Sell'
                            sira +=1
-                           expander('consolidating')                         
+                           expander('consolidating')  
+                        
+                if option2 == 'week':      
+                   if (framew['Decision Super2'].iloc[-1]=='Sell' or framew['Decision Super3'].iloc[-1]=='Sell')\
+                   and (framew['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] or framew['Close'].iloc[-h1]<framew['sup6'].iloc[-h1]):
+                            sira +=1
+                            expander('week breakout')
+                   elif (framew['Decision Super2'].iloc[-1]=='Sell2' or framew['Decision Super3'].iloc[-1]=='Sell2')\
+                   and (framew['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] or framew['Close'].iloc[-h1]<framew['sup6'].iloc[-h1]):
+                            sira +=1
+                            expander('week pullback')         
         if option2 == 'Index' and name in indices:
                 sira +=1
                 expander()
