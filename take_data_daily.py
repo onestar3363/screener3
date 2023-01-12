@@ -32,7 +32,7 @@ def getdata():
         for bticker, bnames in zip (bsymbols,bnameslist):
             st.write(f"⏳ {index,bticker} downloaded")
             index += 1
-            df=yf.download(bticker,period="1y",interval='1d',auto_adjust=True )
+            df=yf.download(bticker,period="2y",interval='1d',auto_adjust=True )
             ohlcv_dict = {'Open': 'first',
               'High': 'max',
               'Low': 'min',
