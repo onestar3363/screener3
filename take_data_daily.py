@@ -358,8 +358,9 @@ for name, frame, framew in zip(names,framelist, framelistw):
                    ##and frame['Decision ADX'].iloc[-h]=='Buy':                    
                    #         sira +=1
                    #         expander('cosku')                          
-            if option1 == 'Sell' and (framew['Close'].iloc[-1]<framew['sup2'].iloc[-1] or framew['Close'].iloc[-1]<framew['sup4'].iloc[-1] or framew['Close'].iloc[-1]<framew['sup6'].iloc[-1])\
-            and (framew['Dec_EMA20'].iloc[-1]=='Sell' or framew['Dec_EMA50'].iloc[-1]=='Sell'):
+            if option1 == 'Sell' and (framew['Close'].iloc[-1]<framew['sup2'].iloc[-1]\
+            or framew['Close'].iloc[-1]<framew['sup4'].iloc[-1] or framew['Close'].iloc[-1]<framew['sup6'].iloc[-1]):
+            #and (framew['Dec_EMA20'].iloc[-1]=='Sell' or framew['Dec_EMA50'].iloc[-1]=='Sell'):
             #and (framew['Consolidating2'].iloc[-h1]=='Yes' and framew['Consolidating3'].iloc[-h1]=='Yes'):
             #(framew['Dec_EMA50'].iloc[-1]=='Sell'or framew['Dec_EMA20'].iloc[-1]=='Sell'\
             #or framew['Close'].iloc[-1]<framew['sup2'].iloc[-1] or framew['Close'].iloc[-1]<framew['sup4'].iloc[-1] or framew['Dec_MACD'].iloc[-1]=='Sell')):
