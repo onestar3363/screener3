@@ -367,7 +367,7 @@ for name, frame, framew in zip(names,framelist, framelistw):
             #(framew['Dec_EMA50'].iloc[-1]=='Sell'):
             #(framew['Trend MACD'].iloc[-1]=='Sell' or framew['Dec_EMA50'].iloc[-1]=='Sell'):
                 if option2 == 'breakout':
-                   if (frame['Decision Super2'].iloc[-h1]=='Sell' or frame['Decision Super2'].iloc[-h1]=='Sell' or frame['Decision Super2'].iloc[-h1]=='Sell'):
+                   if (frame['Decision Super2'].iloc[-h1]=='Sell' or frame['Decision Super2'].iloc[-h1]=='Sell' or frame['Decision Super2'].iloc[-h1]=='Sell')\
                    #or frame['EMA50_cross'].iloc[-h1]=='Sell' or frame['EMA50_cross'].iloc[-h1]=='Sell')\
                    and (frame['Close'].iloc[-h1]<frame['sup4'].iloc[-h1] or frame['Close'].iloc[-h1]<frame['sup6'].iloc[-h1]):
                              sira +=1
