@@ -325,8 +325,8 @@ for name, frame, framew in zip(names,framelist, framelistw):
                 if option2 == 'pullback':  
                    if (frame['Decision Super'].iloc[-h1-1]=='Buy2' or frame['Decision Super2'].iloc[-h1-1]=='Buy2' or frame['Decision Super3'].iloc[-h1-1]=='Buy2'\
                    or frame['EMA20_cross'].iloc[-h1-1]=='Buy2' or frame['EMA50_cross'].iloc[-h1-1]=='Buy2' or frame['EMA200_cross'].iloc[-h1-1]=='Buy2')\
-                   and (frame['Dec_EMA50'].iloc[-h1]=='Buy'):
-                   and frame['Close'].iloc[-h1]>frame['Close'].iloc[-h1-1]\
+                   and (frame['Dec_EMA50'].iloc[-h1]=='Buy')\
+                   and frame['Close'].iloc[-h1]>frame['Close'].iloc[-h1-1]:
                             sira +=1
                             expander('pullback')
           
