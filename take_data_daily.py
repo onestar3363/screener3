@@ -17,7 +17,7 @@ st.title('Screener')
 start = time.perf_counter()
 @st.cache(suppress_st_warning=True)
 def getdata():
-    if os.path.exists("günlük.db"):
+    if os.path.exists ("günlük.db"):
         os.remove("günlük.db")
     elif os.path.exists("haftalik.db"):
         os.remove("haftalik.db")
