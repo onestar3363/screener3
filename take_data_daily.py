@@ -332,11 +332,11 @@ for name, frame, framew in zip(names,framelist, framelistw):
                             expander('pullback')
           
                 if option2 == 'consolidating':             
-                   if (frame['Consolidating'].iloc[-h1]=='Yes' and frame['Consolidating2'].iloc[-h1]=='Yes' and frame['Consolidating3'].iloc[-h1]=='Yes')\
-                   and (frame['Dec_EMA50'].iloc[-h1]=='Buy'and frame['Dec_EMA20'].iloc[-h1]=='Buy')\
-                   and (frame['Close'].iloc[-h1]>frame['sup2'].iloc[-h1]>frame['sup4'].iloc[-h1]>frame['sup6'].iloc[-h1])\
+                   if ( frame['Consolidating2'].iloc[-h1]=='Yes' and frame['Consolidating3'].iloc[-h1]=='Yes')\
+                   and (frame['Dec_EMA50'].iloc[-h1]=='Buy' or frame['Dec_EMA20'].iloc[-h1]=='Buy')\
+                   and (frame['Close'].iloc[-h1]>frame['sup4'].iloc[-h1] or frame['Close'].iloc[-h1]>frame['sup6'].iloc[-h1])\
                    and frame['Dec_EMA200'].iloc[-h1]=='Buy'\
-                   and frame['Dec_MACD'].iloc[-h1]=='Buy':
+                   and frame['Trend MACD'].iloc[-1]=='Buy':
                             sira +=1
                             expander('consolidating') 
                    if option2 == 'week':
