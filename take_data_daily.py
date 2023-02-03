@@ -246,7 +246,7 @@ def get_figures(frame,r):
     fig.add_trace(go.Scatter(x=framew['Date'].tail(20), 
          y=framew['sup2'].tail(20),
          opacity=0.7,
-         line=dict(color='orange', width=2), 
+         line=dict(color='red', width=2), 
          name='Supertrend1'))
     
     fig.add_trace(go.Scatter(x=frame['Date'].tail(r), 
