@@ -319,7 +319,8 @@ for name, frame, framew in zip(names,framelist, framelistw):
             #or framew['Close'].iloc[-1]>framew['sup2'].iloc[-1] or framew['Close'].iloc[-1]>framew['sup4'].iloc[-1])):
            
                 if option2 == 'breakout':
-                   if (frame['EMA20_cross'].iloc[-h1]=='Buy' or frame['EMA50_cross'].iloc[-h1]=='Buy' or frame['Decision Super2'].iloc[-h1]=='Buy')\
+                   if (frame['EMA20_cross'].iloc[-h1]=='Buy' or frame['EMA50_cross'].iloc[-h1]=='Buy' or frame['Decision Super2'].iloc[-h1]=='Buy'\
+                   or framew['Decision Super'].iloc[-h1]=='Buy')\
                    and (frame['Dec_EMA50'].iloc[-h1]=='Buy')\
                    and (frame['Close'].iloc[-h1]>frame['sup6'].iloc[-h1] and framew['Close'].iloc[-h1]>framew['sup2'].iloc[-h1]):
                    #(frame['Decision Super2'].iloc[-h1]=='Buy' or frame['Decision Super2'].iloc[-h1]=='Buy' or frame['Decision Super3'].iloc[-h1]=='Buy'\
