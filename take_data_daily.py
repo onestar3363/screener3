@@ -328,7 +328,7 @@ for name, frame, framew in zip(names,framelist, framelistw):
                             expander('breakout')
                                        
                 if option2 == 'pullback':  
-                   if (frame['Decision Super2'].iloc[-h1]=='Buy2' or frame['Decision Super3'].iloc[-h1]=='Buy2'\
+                   if (frame['Decision Super'].iloc[-h1]=='Buy2' or frame['Decision Super2'].iloc[-h1]=='Buy2' or frame['Decision Super3'].iloc[-h1]=='Buy2'\
                    or framew['Decision Super'].iloc[-h1]=='Buy2' or framew['Decision Super2'].iloc[-h1]=='Buy2'\
                    or frame['EMA20_cross'].iloc[-h1]=='Buy2' or frame['EMA50_cross'].iloc[-h1]=='Buy2')\
                    and  (frame['EMA20_cross'].iloc[-h1]=='Buy' or frame['EMA50_cross'].iloc[-h1]=='Buy')\
