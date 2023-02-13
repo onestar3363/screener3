@@ -385,7 +385,7 @@ for name, frame, framew in zip(names,framelist, framelistw):
                    if (frame['Decision Super2'].iloc[-h1-1]=='Sell2' or frame['Decision Super2'].iloc[-h1-1]=='Sell2' or frame['Decision Super3'].iloc[-h1-1]=='Sell2'\
                    or frame['Decision Super2'].iloc[-h1]=='Sell' or frame['EMA50_cross'].iloc[-h1-1]=='Sell2' or frame['EMA200_cross'].iloc[-h1]=='Sell2'\
                    or framew['EMA50_cross'].iloc[-h1]=='Sell2' or frame['EMA50_cross'].iloc[-h1]=='Sell')\
-                   and (framew['Dec_EMA50'].iloc[-h1]=='Sell' or framew['Close'].iloc[-1]<framew['sup4'].iloc[-1])\
+                   and (framew['Dec_EMA50'].iloc[-h1]=='Sell' and framew['Close'].iloc[-1]<framew['sup6'].iloc[-1])\
                    and frame['Dec_EMA20'].iloc[-h1]=='Sell'\
                    and frame['Close'].iloc[-h1]<frame['Close'].iloc[-h1-1]:
                             sira +=1
